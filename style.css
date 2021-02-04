@@ -22,6 +22,7 @@ main {
 .container {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
 }
 
@@ -43,7 +44,8 @@ main {
 
 .txt-content {
   position: relative;
-  flex: 1;
+  flex: 20rem;
+  flex-basis: 40rem;
 }
 
 h1 {
@@ -120,11 +122,80 @@ span {
 .img-content {
   min-height: 100vh;
   width: 40%;
-  flex: 0.7;
+  flex: 20rem;
+  flex-basis: 30rem;
 }
 
 .img-content img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .txt-content {
+    text-align: center;
+  }
+
+  .title {
+    width: 100%;
+  }
+
+  button {
+    right: 0%;
+    padding: 1.1rem 2.5rem;
+  }
+
+  html {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    overflow: visible;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 75%;
+  }
+
+  .container {
+    margin: 0;
+  }
+
+  .logo-container {
+    justify-content: center;
+  }
+
+  .txt-content {
+    width: 100%;
+    margin: 0;
+  }
+
+  .text {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 65%;
+  }
+
+  .text {
+    min-height: 70vh;
+  }
+
+  button {
+    padding: 0.9rem 2.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 3rem;
+  }
 }
